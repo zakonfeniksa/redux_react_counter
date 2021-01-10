@@ -8,7 +8,12 @@ import counter from './reducer';
 
 const destination = document.querySelector("#container");
 
+//Magazyn
+let store = createStore(counter);
+
 ReactDOM.render(
-  <div></div>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   destination
 );
